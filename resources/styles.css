@@ -52,3 +52,132 @@ nav li {
     color: gray;
 }
 
+#banner-container {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#banner-container h1 {
+    font-size: 2rem;
+    margin: .75rem auto;
+}
+
+#banner-text {
+    width: 65%;
+    color: gray;
+    text-align: center;
+    align-self: center;
+    margin: 3rem;
+}
+
+#banner-image {
+    background-image: url("./images/banner-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 35%;
+    height: auto;
+    min-height: 500px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 1200px) {
+    #banner-container {
+        display: inline-flex;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    #banner-container h1 {
+        margin: .75rem auto;
+        font-size: 1.5rem;
+    }
+    
+    #banner-text {
+        width: 90%;
+        color: gray;
+        text-align: center;
+        align-self: center;
+        margin: 1.5rem;
+    }
+    
+    #banner-image {
+        background-image: url("./images/banner-image.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 50%;
+        min-height: 450px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #banner-container {
+        display: inline-flex;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    #banner-container h1 {
+        margin: .75rem auto;
+        font-size: 1.5rem;
+    }
+    
+    #banner-text {
+        width: 90%;
+        color: gray;
+        text-align: center;
+        align-self: center;
+        margin: 1.5rem;
+    }
+    
+    #banner-image {
+        background-image: url("./images/banner-image.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 50%;
+        min-height: 400px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav li {
+        font-size: .8rem;
+    }
+    
+    #banner-container {
+        display: inline-flex;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    #banner-container h1 {
+        margin: .75rem auto;
+        font-size: 1rem;
+    }
+    
+    #banner-text {
+        width: 90%;
+        color: gray;
+        text-align: center;
+        align-self: center;
+        margin: 1rem;
+    }
+    
+    #banner-image {
+        background-image: url("./images/banner-image.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 50%;
+        min-height: 300px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
