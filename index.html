@@ -14,13 +14,13 @@
     <header>
       <nav>
         <ul>
-          <a href=""><li>ABOUT ME</li></a>
+          <a href="#about"><li>ABOUT ME</li></a>
           <li>|</li>
-          <a href=""><li>PROJECTS</li></a>
+          <a href="#projects"><li>PROJECTS</li></a>
           <li>|</li>
-          <a href=""><li>SKILLS</li></a>
+          <a href="#skills-container"><li>SKILLS</li></a>
           <li>|</li>
-          <a href=""><li>CONTACT</li></a>
+          <a href="contact.html"><li>CONTACT</li></a>
         </ul>
       </nav>
       <div id="banner-container">
@@ -30,20 +30,126 @@
       <div id="banner-container-overlay"></div>
     </header>
     <main>
-      <section class="main-section-container" id="about">
-        <h3>ABOUT ME</h3>
-        <img src="resources/images/banner-image.jpg" alt="Tom Cockerill">
-        <p>Former Associate Operations Manager at Ubisoft turned programmer, Tom
-          left Ubisoft to fulfill his dream of working in software development.
-          Working through a retraining course provided by IT Career Switch, Tom
-          came to master the programming and coding languages of HTML5, CSS3,
-          Javascript, Python and more.</p>
-      </section>
-      <section class="main-section-container" id="projects">
-        <h3>PROJECTS</h3>
+      <div id="about-projects-container">
+        <section class="about-projects-subcontainer" id="about">
+          <h3>ABOUT ME</h3>
+          <img src="resources/images/banner-image.jpg" alt="Tom Cockerill" />
+          <p>
+            Former Associate Operations Manager at Ubisoft turned programmer,
+            Tom left Ubisoft to fulfill his dream of working in software
+            development. Working through a retraining course provided by IT
+            Career Switch, Tom came to master the programming and coding
+            languages of HTML5, CSS3, Javascript, Python and more.
+          </p>
+        </section>
+        <section class="about-projects-subcontainer" id="projects">
+          <div id="project-titles">
+            <h3>PROJECTS</h3>
+            <h4 id="number-guesser-title">Number Guesser>></h4>
+            <h4 id="mysterious-organism-title">Mysterious Organism>></h4>
+            <h4 id="web-development-title">Web Development>></h4>
+          </div>
+          <p id="placeholder">
+            Click on a project title for further explanation.
+          </p>
+          <p id="num-guess-desc" class="project-hidden-paragraph">
+            <strong>Number Guesser</strong><br /><br />One of the first projects
+            completed as part of the course. This is a simple guessing game
+            against a computer player with random numbers generated as the
+            target number and for the computer's guess. Whoever is closest to
+            the target number gains a point, the player getting the point in
+            case of a tie. The html elements were all provided but the script
+            file had to be completed from ground up to get the game working. You
+            can find the game
+            <a href="https://tomc37.github.io/number_guesser/" target="_blank"
+              >here</a
+            >
+            and the github respository
+            <a href="https://github.com/Tomc37/number_guesser" target="_blank"
+              >here</a
+            >.
+          </p>
+          <p id="mys-org-desc" class="project-hidden-paragraph">
+            <strong>Mysterious Organism</strong><br /><br />This was one of the
+            first major JavaScript projects undertaken. The idea was to build an
+            object factory in JavaScript that creates 15 random DNA pairs of a
+            mysterious organism. Pairing the key as the organisms specimen
+            number along with the value of DNA pairs. After that, additional
+            functions were added as methods to use certain criteria to judge the
+            organisms survival and force mutations on individual DNA bases. The
+            file itself is just a .js script file and would need to be ran in
+            terminal or console. You can find the github repository
+            <a
+              href="https://github.com/Tomc37/mysterious_organism"
+              target="_blank"
+              >here</a
+            >.
+          </p>
+          <p id="web-dev-desc" class="project-hidden-paragraph">
+            <strong>Web Development</strong><br /><br />Though this portfolio
+            website itself represents the most recent example of Web
+            Development, the previous progress can be tracked at other websites.
+            <a href="https://tomc37.github.io/tea_cozy/" target="_blank"
+              >This website</a
+            >
+            here was the first foray into flexbox styling<br />This next
+            <a href="https://tomc37.github.io/visit_keswick/" target="_blank"
+              >website</a
+            >
+            expanded upon that, using flexbox but now with responsive elements
+            using media queries to adjust to smaller browser sizes.<br />Finally,
+            this portfolio website is the third Web Development project and some
+            simple JavaScript is now involved which was used to display this
+            text you are reading right now.
+          </p>
+        </section>
+      </div>
+      <section id="skills-container">
+        <h4>SKILLS</h4>
+        <div id="skills-icon-container">
+          <img src="./resources/images/html-5.png" alt="HTML5 Logo" />
+          <img src="./resources/images/css3.png" alt="CSS3 Logo" />
+          <img src="./resources/images/javascript.png" alt="JavaScript Logo" />
+          <img src="./resources/images/python_logo.png" alt="HTML5 Logo" />
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <h6>&copy Tom Cockerill</h6>
+    </footer>
   </body>
-  <script></script>
+  <script>
+    const numGuessTitle = document.getElementById("number-guesser-title");
+    const mysOrgTitle = document.getElementById("mysterious-organism-title");
+    const webDevTitle = document.getElementById("web-development-title");
+    const placeholderDesc = document.getElementById("placeholder");
+    const numGuessDesc = document.getElementById("num-guess-desc");
+    const mysOrgDesc = document.getElementById("mys-org-desc");
+    const webDevDesc = document.getElementById("web-dev-desc");
+
+    const numGuessClick = () => {
+      placeholderDesc.style.display = "none";
+      numGuessDesc.style.display = "block";
+      mysOrgDesc.style.display = "none";
+      webDevDesc.style.display = "none";
+    };
+
+    const mysOrgClick = () => {
+      placeholderDesc.style.display = "none";
+      numGuessDesc.style.display = "none";
+      mysOrgDesc.style.display = "block";
+      webDevDesc.style.display = "none";
+    };
+
+    const webDevClick = () => {
+      placeholderDesc.style.display = "none";
+      numGuessDesc.style.display = "none";
+      mysOrgDesc.style.display = "none";
+      webDevDesc.style.display = "block";
+    };
+
+    numGuessTitle.addEventListener("click", numGuessClick);
+    mysOrgTitle.addEventListener("click", mysOrgClick);
+    webDevTitle.addEventListener("click", webDevClick);
+  </script>
 </html>
