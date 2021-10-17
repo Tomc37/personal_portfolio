@@ -259,12 +259,12 @@ footer h6 {
       margin-bottom: .3rem;
     }
 
-    #projects h4 {
+    #projects h3 {
       text-align: center;
     }
 
     #projects p {
-      text-align: center;
+      text-align: left;
       width: 95%;
     }
 }
