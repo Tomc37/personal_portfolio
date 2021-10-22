@@ -151,6 +151,10 @@ main {
   padding-bottom: .75rem;
 }
 
+#projects h4:hover {
+  cursor: pointer;
+}
+
 #projects p {
   width: 60%;
   font-size: .8rem;
