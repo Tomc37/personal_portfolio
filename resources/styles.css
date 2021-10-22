@@ -238,38 +238,6 @@ footer h6 {
 }
 
 @media only screen and (max-width: 1024px) {
-    #banner-container h1 {
-        top: 16rem;
-        left: 6rem;
-        font-size: 2.5rem;
-    }
-
-    #banner-container h2 {
-        top: 19rem;
-        left: 9rem;
-        font-size: 2rem;
-    }
-
-    #about p {
-      flex-basis: 95%;
-    }
-
-    #projects {
-      justify-content: center;
-    }
-
-    #project-titles {
-      width: 90%;
-      margin-bottom: .3rem;
-    }
-
-    #projects p {
-      text-align: left;
-      width: 95%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
     nav li {
         font-size: .8rem;
     }
@@ -301,6 +269,7 @@ footer h6 {
 
     #about p {
       margin-right: 1rem;
+      width: 100%;
     }
 }
 
