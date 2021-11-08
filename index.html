@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
   <head>
     <title>Tom Cockerill - Personal Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
     <link href="resources/styles.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,8 +40,7 @@
             Former Associate Operations Manager at Ubisoft turned programmer,
             Tom left Ubisoft to fulfill his dream of working in software
             development. Working through a retraining course provided by IT
-            Career Switch
-            , Tom came to master the programming and coding
+            Career Switch , Tom came to master the programming and coding
             languages of HTML5, CSS3, Javascript, Python and more.
           </p>
         </section>
@@ -51,6 +50,8 @@
             <h4 id="number-guesser-title">Number Guesser>></h4>
             <h4 id="mysterious-organism-title">Mysterious Organism>></h4>
             <h4 id="web-development-title">Web Development>></h4>
+            <h4 id="find-hat-title">Find Your Hat Game>></h4>
+            <h4 id="jammming-title">Jammming>></h4>
           </div>
           <p id="placeholder">
             Click on a project title for further explanation.
@@ -89,9 +90,9 @@
             >.
           </p>
           <p id="web-dev-desc" class="project-hidden-paragraph">
-            <strong>Web Development</strong><br /><br />This portfolio
-            website itself represents the most recent example of Web
-            Development, the previous progress can be tracked at other websites.
+            <strong>Web Development</strong><br /><br />This portfolio website
+            itself represents the most recent example of Web Development, the
+            previous progress can be tracked at other websites.
             <a href="https://tomc37.github.io/tea_cozy/" target="_blank"
               >This website</a
             >
@@ -104,6 +105,35 @@
             this portfolio website is the third Web Development project and some
             simple JavaScript is now involved which was used to display this
             text you are reading right now.
+          </p>
+          <p id="find-hat-desc" class="project-hidden-paragraph">
+            <strong>Find Your Hat Game</strong><br /><br />
+            After building out more skills in JavaScript, I moved on to then
+            make an interactive game. Using an array to create a 2D map, we have
+            our character moving around this map using simple commands in order
+            to find their "hat". This is the game's winning condition but the
+            game can be lost if the character falls down a hole or attempts to
+            move out of bounds of the map. You can find the gitub repository
+            <a href="https://github.com/Tomc37/find_your_hat" target="_blank"
+              >here</a
+            >
+            but please note that the game requires some familiarity with Node JS
+            to be ran.
+          </p>
+          <p id="jammming-desc" class="project-hidden-paragraph">
+            <strong>Jammming</strong><br /><br />
+            Following the Find Hat project, I then moved on to develop skills in
+            the areas of asynchronous JavaScript, HTTP requests and the React
+            framework. This resulted in the Jammming web-app that you can find
+            <a href="https://jammmingtc.surge.sh/" target="_blank">here</a
+            >.<br />
+            This web-app communicates with the Spotify API, requiring login to a
+            Spotify account as an alternate method of creating playlists on your
+            spotify account. You simply search for songs and add them to a
+            playlist and save that playlist.<br />
+            All of the components are built using React class components with
+            several states being passed to props with data being received from
+            and transmitted through the Spotify API.
           </p>
         </section>
       </div>
@@ -125,16 +155,22 @@
     const numGuessTitle = document.getElementById("number-guesser-title");
     const mysOrgTitle = document.getElementById("mysterious-organism-title");
     const webDevTitle = document.getElementById("web-development-title");
+    const findHatTitle = document.getElementById("find-hat-title");
+    const jammingTitle = document.getElementById("jammming-title");
     const placeholderDesc = document.getElementById("placeholder");
     const numGuessDesc = document.getElementById("num-guess-desc");
     const mysOrgDesc = document.getElementById("mys-org-desc");
     const webDevDesc = document.getElementById("web-dev-desc");
+    const findHatDesc = document.getElementById("find-hat-desc");
+    const jammmingDesc = document.getElementById("jammming-desc");
 
     const numGuessClick = () => {
       placeholderDesc.style.display = "none";
       numGuessDesc.style.display = "block";
       mysOrgDesc.style.display = "none";
       webDevDesc.style.display = "none";
+      findHatDesc.style.display = "none";
+      jammmingDesc.style.display = "none";
     };
 
     const mysOrgClick = () => {
@@ -142,6 +178,8 @@
       numGuessDesc.style.display = "none";
       mysOrgDesc.style.display = "block";
       webDevDesc.style.display = "none";
+      findHatDesc.style.display = "none";
+      jammmingDesc.style.display = "none";
     };
 
     const webDevClick = () => {
@@ -149,10 +187,32 @@
       numGuessDesc.style.display = "none";
       mysOrgDesc.style.display = "none";
       webDevDesc.style.display = "block";
+      findHatDesc.style.display = "none";
+      jammmingDesc.style.display = "none";
+    };
+
+    const findHatClick = () => {
+      placeholderDesc.style.display = "none";
+      numGuessDesc.style.display = "none";
+      mysOrgDesc.style.display = "none";
+      webDevDesc.style.display = "none";
+      findHatDesc.style.display = "block";
+      jammmingDesc.style.display = "none";
+    };
+
+    const jammmingClick = () => {
+      placeholderDesc.style.display = "none";
+      numGuessDesc.style.display = "none";
+      mysOrgDesc.style.display = "none";
+      webDevDesc.style.display = "none";
+      findHatDesc.style.display = "none";
+      jammmingDesc.style.display = "block";
     };
 
     numGuessTitle.addEventListener("click", numGuessClick);
     mysOrgTitle.addEventListener("click", mysOrgClick);
     webDevTitle.addEventListener("click", webDevClick);
+    findHatTitle.addEventListener("click", findHatClick);
+    jammingTitle.addEventListener("click", jammmingClick);
   </script>
 </html>
