@@ -43,38 +43,4 @@
       <h6>&copy Tom Cockerill</h6>
     </footer>
   </body>
-  <script>
-    const numGuessTitle = document.getElementById("number-guesser-title");
-    const mysOrgTitle = document.getElementById("mysterious-organism-title");
-    const webDevTitle = document.getElementById("web-development-title");
-    const placeholderDesc = document.getElementById("placeholder");
-    const numGuessDesc = document.getElementById("num-guess-desc");
-    const mysOrgDesc = document.getElementById("mys-org-desc");
-    const webDevDesc = document.getElementById("web-dev-desc");
-
-    const numGuessClick = () => {
-      placeholderDesc.style.display = "none";
-      numGuessDesc.style.display = "block";
-      mysOrgDesc.style.display = "none";
-      webDevDesc.style.display = "none";
-    };
-
-    const mysOrgClick = () => {
-      placeholderDesc.style.display = "none";
-      numGuessDesc.style.display = "none";
-      mysOrgDesc.style.display = "block";
-      webDevDesc.style.display = "none";
-    };
-
-    const webDevClick = () => {
-      placeholderDesc.style.display = "none";
-      numGuessDesc.style.display = "none";
-      mysOrgDesc.style.display = "none";
-      webDevDesc.style.display = "block";
-    };
-
-    numGuessTitle.addEventListener("click", numGuessClick);
-    mysOrgTitle.addEventListener("click", mysOrgClick);
-    webDevTitle.addEventListener("click", webDevClick);
-  </script>
 </html>
